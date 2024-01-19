@@ -2,11 +2,11 @@
  * Note: The returned array must be malloced, assume caller calls free().
  */
 int* findWordsContaining(char** words, int wordsSize, char x, int* returnSize) {
-    int i =0;
+    int i, retCount =0;
     int *returnArray = (int *)malloc(wordsSize * sizeof(int)); 
-    *returnSize = 0;
+    //*returnSize = 0;
     //printf ("#Words: %d\n", wordsSize);
-    int retCount = 0;
+    //int retCount = 0;
     while (i< wordsSize){
         //printf ("Index: %d\n", i);
         //printf ("Word: %s\n", words[i]);
@@ -21,8 +21,8 @@ int* findWordsContaining(char** words, int wordsSize, char x, int* returnSize) {
     }
     *returnSize = retCount;
     //printf ("Ret count:%d\n", *returnSize);
-    for (int i=0; i < retCount; i++) {
+    //for (int i=0; i < retCount; i++) {
         //printf ("Return Array: %d\n", returnArray[i]);
-    }
+    //}
     return returnArray;
 }
